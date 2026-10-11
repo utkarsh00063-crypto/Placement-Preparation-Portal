@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlacementPrep Hub - Ultimate Career & Interview Portal</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            900: '#312e81',
+                            dark: '#0f172a',
+                            card: '#1e293b'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .glow-effect {
+            box-shadow: 0 0 25px -5px rgba(99, 102, 241, 0.4);
+        }
+    </style>
+</head>
+
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col selection:bg-indigo-500 selection:text-white">
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 glass-panel border-b border-slate-800/80 px-4 lg:px-12 py-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-3 group">
+                <div
+                    class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-indigo-500/30 group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <span
+                    class="text-xl font-extrabold bg-gradient-to-r from-white via-indigo-200 to-indigo-400 bg-clip-text text-transparent">PlacementPrep
+                    Hub</span>
+            </a>
+
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center space-x-8 font-medium text-sm text-slate-300">
+                <a href="#home" class="hover:text-indigo-400 transition-colors">Home</a>
+                <a href="#questions" class="hover:text-indigo-400 transition-colors">Question Bank</a>
+                <a href="#quiz" class="hover:text-indigo-400 transition-colors">Quiz Arena</a>
+                <a href="#resources" class="hover:text-indigo-400 transition-colors">Resources</a>
+                <a href="#dashboard" class="hover:text-indigo-400 transition-colors">My Progress</a>
+            </div>
+
+            <!-- Action / Stats Pill -->
+            <div class="hidden md:flex items-center space-x-4">
+                <div
+                    class="bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-full flex items-center space-x-2 text-xs font-semibold text-indigo-300">
+                    <i class="fa-solid fa-fire text-amber-500"></i>
+                    <span id="streak-counter">0</span> Day Streak
+                </div>
+                <a href="#questions"
+                    class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-xl text-sm font-semibold shadow-lg shadow-indigo-600/30 transition-all hover:scale-105">Start
+                    Practicing</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white focus:outline-none text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden pt-4 pb-2 border-t border-slate-800 mt-3 flex flex-col space-y-3">
+            <a href="#home" class="block text-slate-300 hover:text-indigo-400 font-medium py-1">Home</a>
+            <a href="#questions" class="block text-slate-300 hover:text-indigo-400 font-medium py-1">Question Bank</a>
+            <a href="#quiz" class="block text-slate-300 hover:text-indigo-400 font-medium py-1">Quiz Arena</a>
+            <a href="#resources" class="block text-slate-300 hover:text-indigo-400 font-medium py-1">Resources</a>
+            <a href="#dashboard" class="block text-slate-300 hover:text-indigo-400 font-medium py-1">My Progress</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="relative overflow-hidden pt-16 pb-24 lg:pt-24 lg:pb-32 px-4">
+        <div
+            class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-900/30 via-slate-950/0 to-slate-950/0 pointer-events-none">
+        </div>
+        <div class="max-w-6xl mx-auto text-center relative z-10">
+            <div
+                class="inline-flex items-center space-x-2 bg-indigo-500/10 border border-indigo-500/30 px-4 py-1.5 rounded-full text-indigo-300 text-xs font-semibold mb-6 uppercase tracking-wider">
+                <i class="fa-solid fa-bolt text-indigo-400"></i> Crack Top Product & Service Based Companies
+            </div>
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+                Master Your Tech Interviews <br class="hidden sm:inline"> With <span
+                    class="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Confidence</span>
+            </h1>
+            <p class="text-base sm:text-xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed">
+                Access curated Data Structures, Algorithms, Core CS subjects, Company-specific interview questions, and
+                real-time timed quizzes to fast-track your placement journey.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#questions"
+                    class="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-8 py-4 rounded-xl shadow-xl shadow-indigo-600/40 transition-all hover:scale-105 flex items-center justify-center space-x-3">
+                    <span>Explore Question Bank</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#quiz"
+                    class="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 font-semibold px-8 py-4 rounded-xl transition-all flex items-center justify-center space-x-3">
+                    <i class="fa-solid fa-gamepad text-indigo-400"></i>
+                    <span>Enter Quiz Arena</span>
+                </a>
+            </div>
+
+            <!-- Hero Stats Bar -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto text-left">
+                <div class="glass-panel p-5 rounded-2xl border border-slate-800">
+                    <div class="text-2xl sm:text-3xl font-black text-white mb-1">500+</div>
+                    <div class="text-xs sm:text-sm text-slate-400 font-medium">Curated Questions</div>
+                </div>
+                <div class="glass-panel p-5 rounded-2xl border border-slate-800">
+                    <div class="text-2xl sm:text-3xl font-black text-indigo-400 mb-1">50+</div>
+                    <div class="text-xs sm:text-sm text-slate-400 font-medium">Top Companies</div>
+                </div>
+                <div class="glass-panel p-5 rounded-2xl border border-slate-800">
+                    <div class="text-2xl sm:text-3xl font-black text-purple-400 mb-1">100%</div>
+                    <div class="text-xs sm:text-sm text-slate-400 font-medium">Free Practice</div>
+                </div>
+                <div class="glass-panel p-5 rounded-2xl border border-slate-800">
+                    <div class="text-2xl sm:text-3xl font-black text-emerald-400 mb-1">24/7</div>
+                    <div class="text-xs sm:text-sm text-slate-400 font-medium">Instant Feedback</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Placement Question Bank Section -->
+    <section id="questions" class="py-20 px-4 max-w-7xl mx-auto w-full">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+            <div>
+                <div class="text-indigo-400 font-bold text-xs uppercase tracking-widest mb-2">Practice Hub</div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Placement Question Bank</h2>
+            </div>
+            <!-- Search & Filter Controls -->
+            <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+                <div class="relative">
+                    <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
+                        <i class="fa-solid fa-search"></i>
+                    </span>
+                    <input type="text" id="question-search" placeholder="Search questions..."
+                        class="w-full sm:w-64 bg-slate-900 border border-slate-800 text-slate-200 text-sm rounded-xl pl-10 pr-4 py-2.5 focus:outline-none focus:border-indigo-500">
+                </div>
+            </div>
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="flex items-center space-x-2 overflow-x-auto pb-4 mb-8 scrollbar-none">
+            <button onclick="filterQuestions('All')"
+                class="cat-btn px-5 py-2.5 rounded-xl text-sm font-semibold bg-indigo-600 text-white shadow-md shadow-indigo-600/30 whitespace-nowrap transition-all">All
+                Questions</button>
+            <button onclick="filterQuestions('DSA')"
+                class="cat-btn px-5 py-2.5 rounded-xl text-sm font-semibold bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 whitespace-nowrap transition-all">DSA</button>
+            <button onclick="filterQuestions('Aptitude')"
+                class="cat-btn px-5 py-2.5 rounded-xl text-sm font-semibold bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 whitespace-nowrap transition-all">Aptitude</button>
+            <button onclick="filterQuestions('Core CS')"
+                class="cat-btn px-5 py-2.5 rounded-xl text-sm font-semibold bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 whitespace-nowrap transition-all">Core
+                CS (OS/DBMS)</button>
+            <button onclick="filterQuestions('TCS')"
+                class="cat-btn px-5 py-2.5 rounded-xl text-sm font-semibold bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 whitespace-nowrap transition-all">TCS</button>
+            <button onclick="filterQuestions('Infosys')"
+                class="cat-btn px-5 py-2.5 rounded-xl text-sm font-semibold bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 whitespace-nowrap transition-all">Infosys</button>
+            <button onclick="filterQuestions('Wipro')"
+                class="cat-btn px-5 py-2.5 rounded-xl text-sm font-semibold bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 whitespace-nowrap transition-all">Wipro</button>
+            <button onclick="filterQuestions('Amazon')"
+                class="cat-btn px-5 py-2.5 rounded-xl text-sm font-semibold bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 whitespace-nowrap transition-all">Amazon</button>
+        </div>
+
+        <!-- Question Cards Grid -->
+        <div id="questions-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Dynamically populated via JavaScript -->
+        </div>
+    </section>
+
+    <!-- Quiz Arena Section -->
+    <section id="quiz" class="py-20 px-4 bg-slate-900/50 border-y border-slate-800/80">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <div
+                    class="inline-flex items-center space-x-2 bg-purple-500/10 border border-purple-500/30 px-4 py-1.5 rounded-full text-purple-300 text-xs font-semibold mb-4 uppercase tracking-wider">
+                    <i class="fa-solid fa-gamepad"></i> Interactive Assessment
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-3">Quiz Arena</h2>
+                <p class="text-slate-400 text-sm sm:text-base">Test your technical and aptitude speed with timed
+                    multiple-choice challenges.</p>
+            </div>
+
+            <!-- Quiz Selection & Card Container -->
+            <div id="quiz-container" class="glass-panel rounded-3xl p-6 sm:p-10 border border-slate-800 shadow-2xl">
+                <!-- Quiz Categories Screen -->
+                <div id="quiz-menu" class="text-center py-6">
+                    <h3 class="text-xl font-bold text-white mb-6">Select Quiz Category</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+                        <button onclick="startQuiz('dsa')"
+                            class="p-6 rounded-2xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-left transition-all hover:border-indigo-500 group">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-indigo-600/20 text-indigo-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <h4 class="font-bold text-white text-lg mb-1">DSA & Coding</h4>
+                            <p class="text-xs text-slate-400">Arrays, Strings, Trees & Algorithms</p>
+                        </button>
+                        <button onclick="startQuiz('aptitude')"
+                            class="p-6 rounded-2xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-left transition-all hover:border-purple-500 group">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-purple-600/20 text-purple-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <h4 class="font-bold text-white text-lg mb-1">Quantitative Aptitude</h4>
+                            <p class="text-xs text-slate-400">Math, Reasoning & Logic</p>
+                        </button>
+                        <button onclick="startQuiz('core')"
+                            class="p-6 rounded-2xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-left transition-all hover:border-emerald-500 group">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-emerald-600/20 text-emerald-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-server"></i>
+                            </div>
+                            <h4 class="font-bold text-white text-lg mb-1">Core CS (OS/DBMS)</h4>
+                            <p class="text-xs text-slate-400">Operating Systems, DBMS, Networking</p>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Active Quiz Screen -->
+                <div id="quiz-active" class="hidden">
+                    <div class="flex items-center justify-between mb-8 pb-4 border-b border-slate-800">
+                        <div>
+                            <span id="quiz-category-badge"
+                                class="text-xs font-bold uppercase tracking-wider bg-indigo-500/20 text-indigo-300 px-3 py-1 rounded-full">DSA</span>
+                            <span class="text-sm text-slate-400 ml-3">Question <span id="current-q-num">1</span> of
+                                <span id="total-q-num">5</span></span>
+                        </div>
+                        <div
+                            class="flex items-center space-x-2 bg-slate-900 border border-slate-800 px-4 py-1.5 rounded-full text-sm font-bold text-amber-400">
+                            <i class="fa-solid fa-clock"></i>
+                            <span id="quiz-timer">30</span>s
+                        </div>
+                    </div>
+
+                    <!-- Question text -->
+                    <h3 id="quiz-question-text" class="text-xl sm:text-2xl font-bold text-white mb-6 leading-snug">
+                        Question text goes here?</h3>
+
+                    <!-- Options -->
+                    <div id="quiz-options" class="space-y-3 mb-8">
+                        <!-- Dynamically populated options -->
+                    </div>
+
+                    <!-- Next Button -->
+                    <div class="flex justify-end">
+                        <button id="next-quiz-btn" onclick="nextQuizQuestion()"
+                            class="hidden bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-6 py-3 rounded-xl transition-all">Next
+                            Question</button>
+                    </div>
+                </div>
+
+                <!-- Quiz Results Screen -->
+                <div id="quiz-results" class="hidden text-center py-8">
+                    <div
+                        class="w-20 h-20 bg-emerald-500/20 text-emerald-400 rounded-3xl flex items-center justify-center text-4xl mx-auto mb-6">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-white mb-2">Quiz Completed!</h3>
+                    <p class="text-slate-400 mb-6">Here is how you performed in this challenge.</p>
+
+                    <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl max-w-sm mx-auto mb-8">
+                        <div class="text-4xl font-black text-indigo-400 mb-1" id="final-score">4 / 5</div>
+                        <div class="text-xs text-slate-400 uppercase tracking-wider font-bold">Correct Answers</div>
+                    </div>
+
+                    <div class="flex justify-center space-x-4">
+                        <button onclick="resetQuiz()"
+                            class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-6 py-3 rounded-xl transition-all">Retake
+                            Quiz</button>
+                        <button onclick="backToQuizMenu()"
+                            class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold px-6 py-3 rounded-xl transition-all">Choose
+                            Another Quiz</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interview Resources & Tips -->
+    <section id="resources" class="py-20 px-4 max-w-7xl mx-auto w-full">
+        <div class="text-center mb-12">
+            <div class="text-indigo-400 font-bold text-xs uppercase tracking-widest mb-2">Preparation Guide</div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-3">Interview Tips & Roadmap</h2>
+            <p class="text-slate-400 text-sm sm:text-base">Expert advice to clear resume screening, HR rounds, and
+                technical grilling.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div
+                class="glass-panel p-6 sm:p-8 rounded-3xl border border-slate-800 hover:border-indigo-500/50 transition-all group">
+                <div
+                    class="w-14 h-14 rounded-2xl bg-indigo-600/20 text-indigo-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-file-lines"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">ATS-Friendly Resume</h3>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6">Learn how to format your resume with clean
+                    headings, strong project descriptions, and right keywords to pass automated shortlists.</p>
+                <ul class="space-y-2 text-xs text-slate-300">
+                    <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Single page format for freshers</li>
+                    <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Highlight GitHub & Live links</li>
+                    <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Action verbs in project bullets</li>
+                </ul>
+            </div>
+
+            <div
+                class="glass-panel p-6 sm:p-8 rounded-3xl border border-slate-800 hover:border-purple-500/50 transition-all group">
+                <div
+                    class="w-14 h-14 rounded-2xl bg-purple-600/20 text-purple-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-comments"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">HR Interview Secrets</h3>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6">Master the "Tell me about yourself", salary
+                    discussions, and behavioral questions using the STAR framework.</p>
+                <ul class="space-y-2 text-xs text-slate-300">
+                    <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> STAR method for behavioral answers</li>
+                    <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Researching company values & culture
+                    </li>
+                    <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Asking smart questions to the
+                        interviewer</li>
+                </ul>
+            </div>
+
+            <div
+                class="glass-panel p-6 sm:p-8 rounded-3xl border border-slate-800 hover:border-emerald-500/50 transition-all group">
+                <div
+                    class="w-14 h-14 rounded-2xl bg-emerald-600/20 text-emerald-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Coding Round Strategy</h3>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6">How to approach unknown problems, explain your
+                    thought process clearly, and optimize time/space complexity.</p>
+                <ul class="space-y-2 text-xs text-slate-300">
+                    <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Clarify constraints & edge cases</li>
+                    <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Discuss brute force first</li>
+                    <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Dry run with sample test cases</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Dashboard & Progress Tracker -->
+    <section id="dashboard" class="py-20 px-4 bg-slate-900/50 border-t border-slate-800/80">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <div class="text-indigo-400 font-bold text-xs uppercase tracking-widest mb-2">Performance Analytics
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-3">Your Progress Tracker</h2>
+                <p class="text-slate-400 text-sm sm:text-base">Track your solved problems, accuracy rate, and overall
+                    readiness.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <div class="glass-panel p-6 rounded-3xl border border-slate-800 flex items-center space-x-5">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-indigo-600/20 text-indigo-400 flex items-center justify-center text-2xl font-bold shadow-inner">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-black text-white mb-1" id="stat-solved">0</div>
+                        <div class="text-xs text-slate-400 uppercase tracking-wider font-bold">Questions Solved</div>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-6 rounded-3xl border border-slate-800 flex items-center space-x-5">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-purple-600/20 text-purple-400 flex items-center justify-center text-2xl font-bold shadow-inner">
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-black text-white mb-1" id="stat-accuracy">0%</div>
+                        <div class="text-xs text-slate-400 uppercase tracking-wider font-bold">Quiz Accuracy</div>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-6 rounded-3xl border border-slate-800 flex items-center space-x-5">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-amber-600/20 text-amber-400 flex items-center justify-center text-2xl font-bold shadow-inner">
+                        <i class="fa-solid fa-fire"></i>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-black text-white mb-1" id="stat-streak">0</div>
+                        <div class="text-xs text-slate-400 uppercase tracking-wider font-bold">Day Streak</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reset Progress Data Button -->
+            <div class="text-center">
+                <button onclick="resetProgressData()"
+                    class="text-xs text-red-400 hover:text-red-300 font-semibold underline transition-colors">
+                    <i class="fa-solid fa-trash-can mr-1"></i> Reset Progress Data
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Question Solution Modal -->
+    <div id="solution-modal"
+        class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm hidden">
+        <div
+            class="glass-panel max-w-2xl w-full rounded-3xl border border-slate-700 p-6 sm:p-8 relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-slate-400 hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="modal-category"
+                class="inline-block text-xs font-bold uppercase tracking-wider bg-indigo-500/20 text-indigo-300 px-3 py-1 rounded-full mb-3">
+                DSA</div>
+            <h3 id="modal-title" class="text-2xl font-bold text-white mb-3">Two Sum Problem</h3>
+            <p id="modal-desc" class="text-slate-300 text-sm mb-6 leading-relaxed">Given an array of integers nums and
+                an integer target, return indices of the two numbers such that they add up to target.</p>
+
+            <div class="mb-4">
+                <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Optimal Solution (C++ / Java
+                    / Python)</div>
+                <pre
+                    class="bg-slate-950 p-4 rounded-xl text-xs text-emerald-400 font-mono overflow-x-auto border border-slate-800"><code id="modal-code">vector&lt;int&gt; twoSum(vector&lt;int&gt;& nums, int target) {
+    unordered_map&lt;int, int&gt; mp;
+    for(int i = 0; i &lt; nums.size(); i++) {
+        int rem = target - nums[i];
+        if(mp.count(rem)) return {mp[rem], i};
+        mp[nums[i]] = i;
+    }
+    return {};
+}</code></pre>
+            </div>
+
+            <div class="flex items-center justify-between pt-4 border-t border-slate-800">
+                <span id="modal-company" class="text-xs text-slate-400"><i class="fa-solid fa-building mr-1"></i> Asked
+                    in: Amazon, TCS</span>
+                <button id="modal-solve-btn" onclick="toggleSolveCurrent()"
+                    class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-5 py-2.5 rounded-xl text-sm transition-all flex items-center space-x-2">
+                    <i class="fa-solid fa-check"></i>
+                    <span id="modal-solve-text">Mark as Solved</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="glass-panel border-t border-slate-800/80 py-12 px-4 mt-auto">
+        <div
+            class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+            <div class="flex items-center space-x-3">
+                <div
+                    class="w-8 h-8 rounded-lg bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center text-white font-bold text-sm">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <span class="text-lg font-bold text-white">PlacementPrep Hub</span>
+            </div>
+            <p class="text-xs text-slate-400">© 2026 PlacementPrep Hub. Built for ambitious students & tech aspirants
+                across India.</p>
+            <div class="flex space-x-5 text-slate-400 text-lg">
+                <a href="#" class="hover:text-indigo-400 transition-colors"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="hover:text-indigo-400 transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="hover:text-indigo-400 transition-colors"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Question Data Bank
+        const questionsData = [
+            {
+                id: 1,
+                title: "Two Sum",
+                category: "DSA",
+                difficulty: "Easy",
+                company: "Amazon",
+                solved: false,
+                desc: "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.",
+                code: `// C++ Optimal Solution using Hash Map\nvector<int> twoSum(vector<int>& nums, int target) {\n    unordered_map<int, int> mp;\n    for(int i = 0; i < nums.size(); i++) {\n        int rem = target - nums[i];\n        if(mp.count(rem)) return {mp[rem], i};\n        mp[nums[i]] = i;\n    }\n    return {};\n}`
+            },
+            {
+                id: 2,
+                title: "Reverse a Linked List",
+                category: "DSA",
+                difficulty: "Medium",
+                company: "TCS",
+                solved: false,
+                desc: "Given the head of a singly linked list, reverse the list, and return the reversed list.",
+                code: `// C++ Solution\nListNode* reverseList(ListNode* head) {\n    ListNode *prev = nullptr, *curr = head;\n    while(curr != nullptr) {\n        ListNode* nextTemp = curr->next;\n        curr->next = prev;\n        prev = curr;\n        curr = nextTemp;\n    }\n    return prev;\n}`
+            },
+            {
+                id: 3,
+                title: "Time & Work Aptitude Problem",
+                category: "Aptitude",
+                difficulty: "Easy",
+                company: "Infosys",
+                solved: false,
+                desc: "A can do a piece of work in 10 days and B can do it in 15 days. How long will they take working together?",
+                code: `// Solution Explanation\n// 1 day work of A = 1/10\n// 1 day work of B = 1/15\n// Combined 1 day work = (1/10 + 1/15) = 5/30 = 1/6\n// Total days = 6 days.`
+            },
+            {
+                id: 4,
+                title: "Difference between Process and Thread",
+                category: "Core CS",
+                difficulty: "Medium",
+                company: "Wipro",
+                solved: false,
+                desc: "Explain the fundamental differences between a process and a thread in Operating Systems.",
+                code: `// Core CS Notes\n// 1. Process is heavy-weight with its own address space, whereas threads share the same address space.\n// 2. Context switching between threads is faster than between processes.\n// 3. Inter-process communication is more complex than inter-thread communication.`
+            },
+            {
+                id: 5,
+                title: "Longest Substring Without Repeating Characters",
+                category: "DSA",
+                difficulty: "Medium",
+                company: "Amazon",
+                solved: false,
+                desc: "Given a string s, find the length of the longest substring without repeating characters.",
+                code: `// C++ Sliding Window Solution\nint lengthOfLongestSubstring(string s) {\n    vector<int> mp(256, -1);\n    int left = 0, maxLen = 0;\n    for(int right = 0; right < s.length(); right++) {\n        if(mp[s[right]] >= left) left = mp[s[right]] + 1;\n        mp[s[right]] = right;\n        maxLen = max(maxLen, right - left + 1);\n    }\n    return maxLen;\n}`
+            },
+            {
+                id: 6,
+                title: "Profit and Loss Percentage",
+                category: "Aptitude",
+                difficulty: "Easy",
+                company: "TCS",
+                solved: false,
+                desc: "An article is bought for ₹400 and sold for ₹480. Find the profit percentage.",
+                code: `// Solution:\n// Cost Price (CP) = ₹400, Selling Price (SP) = ₹480\n// Profit = SP - CP = ₹80\n// Profit % = (Profit / CP) * 100 = (80 / 400) * 100 = 20%.`
+            },
+            {
+                id: 7,
+                title: "Database Normal5ation (1NF, 2NF, 3NF)",
+                category: "Core CS",
+                difficulty: "Hard",
+                company: "Infosys",
+                solved: false,
+                desc: "Explain database normalization and the rules for 1st, 2nd, and 3rd normal forms with examples.",
+                code: `// DBMS Notes:\n// 1NF: Atomic values (no repeating groups).\n// 2NF: 1NF + No partial dependency (all non-key attributes fully functionally dependent on primary key).\n// 3NF: 2NF + No transitive dependency.`
+            },
+            {
+                id: 8,
+                title: "Detect Cycle in a Linked List",
+                category: "DSA",
+                difficulty: "Medium",
+                company: "Wipro",
+                solved: false,
+                desc: "Given head, the head of a linked list, determine if the linked list has a cycle in it.",
+                code: `// C++ Floyd's Cycle-Finding Algorithm\nbool hasCycle(ListNode *head) {\n    ListNode *slow = head, *fast = head;\n    while(fast && fast->next) {\n        slow = slow->next;\n        fast = fast->next->next;\n        if(slow == fast) return true;\n    }\n    return false;\n}`
+            }
+        ];
+
+        // Quiz Question Bank
+        const quizData = {
+            dsa: [
+                { q: "What is the worst-case time complexity of QuickSort?", options: ["O(N log N)", "O(N^2)", "O(N)", "O(log N)"], ans: 1 },
+                { q: "Which data structure is used for Breadth First Search (BFS) in graphs?", options: ["Stack", "Queue", "Priority Queue", "Array"], ans: 1 },
+                { q: "What is the time complexity of searching an element in a balanced BST?", options: ["O(N)", "O(log N)", "O(1)", "O(N log N)"], ans: 1 },
+                { q: "Which of the following sorting algorithms is stable?", options: ["Quick Sort", "Heap Sort", "Merge Sort", "Selection Sort"], ans: 2 },
+                { q: "Push and Pop operations in a standard stack take what time complexity?", options: ["O(N)", "O(log N)", "O(1)", "O(N^2)"], ans: 2 }
+            ],
+            aptitude: [
+                { q: "If a train runs at 60 km/h, how far does it travel in 15 minutes?", options: ["10 km", "15 km", "20 km", "25 km"], ans: 1 },
+                { q: "The sum of first 10 natural numbers is:", options: ["45", "55", "50", "60"], ans: 1 },
+                { q: "What is 15% of 300?", options: ["35", "40", "45", "50"], ans: 2 },
+                { q: "If 6 men can complete a work in 12 days, how many days will 8 men take?", options: ["9 days", "8 days", "10 days", "11 days"], ans: 0 },
+                { q: "Find the missing number in series: 2, 6, 12, 20, 30, ?", options: ["40", "42", "45", "48"], ans: 1 }
+            ],
+            core: [
+                { q: "Which scheduler selects processes from ready queue and allocates CPU?", options: ["Long-term scheduler", "Short-term scheduler", "Medium-term scheduler", "Dispatcher"], ans: 1 },
+                { q: "ACID properties are associated with which system?", options: ["Operating System", "DBMS", "Computer Networks", "Compiler Design"], ans: 1 },
+                { q: "Which layer of OSI model is responsible for routing?", options: ["Physical", "Data Link", "Network", "Transport"], ans: 2 },
+                { q: "What is thrashing in Operating Systems?", options: ["High CPU utilization", "Excessive paging/swapping", "Deadlock state", "Fast context switching"], ans: 1 },
+                { q: "Primary key ensures which of the following?", options: ["Uniqueness only", "Not null only", "Both Uniqueness and Not null", "Foreign key reference"], ans: 2 }
+            ]
+        };
+
+        // State variables
+        let currentFilter = 'All';
+        let searchQuery = '';
+        let currentModalQuestionId = null;
+
+        // Quiz State
+        let activeQuizType = null;
+        let currentQuizIndex = 0;
+        let quizScore = 0;
+        let quizTimerInterval = null;
+        let timeLeft = 30;
+
+        // Load progress from localStorage
+        function loadProgress() {
+            let savedSolved = localStorage.getItem('placement_solved');
+            let savedStreak = localStorage.getItem('placement_streak');
+            let savedQuizStats = localStorage.getItem('placement_quiz_stats');
+
+            if (savedSolved) {
+                let solvedIds = JSON.parse(savedSolved);
+                questionsData.forEach(q => {
+                    if (solvedIds.includes(q.id)) q.solved = true;
+                });
+            }
+
+            if (!savedStreak) {
+                localStorage.setItem('placement_streak', '3');
+                savedStreak = '3';
+            }
+
+            document.getElementById('streak-counter').innerText = savedStreak;
+            document.getElementById('stat-streak').innerText = savedStreak;
+
+            updateStatsDisplay();
+        }
+
+        function saveProgress() {
+            let solvedIds = questionsData.filter(q => q.solved).map(q => q.id);
+            localStorage.setItem('placement_solved', JSON.stringify(solvedIds));
+            updateStatsDisplay();
+        }
+
+        function updateStatsDisplay() {
+            let solvedCount = questionsData.filter(q => q.solved).length;
+            document.getElementById('stat-solved').innerText = solvedCount;
+
+            let savedQuizStats = JSON.parse(localStorage.getItem('placement_quiz_stats') || '{"total":0, "correct":0}');
+            let accuracy = savedQuizStats.total > 0 ? Math.round((savedQuizStats.correct / savedQuizStats.total) * 100) : 0;
+            document.getElementById('stat-accuracy').innerText = accuracy + '%';
+        }
+
+        // Render Question Cards
+        function renderQuestions() {
+            const grid = document.getElementById('questions-grid');
+            grid.innerHTML = '';
+
+            let filtered = questionsData.filter(q => {
+                let matchesCategory = (currentFilter === 'All' || q.category === currentFilter || q.company === currentFilter);
+                let matchesSearch = q.title.toLowerCase().includes(searchQuery.toLowerCase()) || q.desc.toLowerCase().includes(searchQuery.toLowerCase());
+                return matchesCategory && matchesSearch;
+            });
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `<div class="col-span-full text-center py-12 text-slate-400">No questions found matching your criteria.</div>`;
+                return;
+            }
+
+            filtered.forEach(q => {
+                let card = document.createElement('div');
+                card.className = `glass-panel p-6 rounded-3xl border border-slate-800 hover:border-indigo-500/50 transition-all flex flex-col justify-between group ${q.solved ? 'border-emerald-500/30 bg-emerald-950/10' : ''}`;
+
+                let diffColor = q.difficulty === 'Easy' ? 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20' : q.difficulty === 'Medium' ? 'text-amber-400 bg-amber-500/10 border-amber-500/20' : 'text-red-400 bg-red-500/10 border-red-500/20';
+
+                card.innerHTML = `
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider bg-indigo-500/20 text-indigo-300 px-3 py-1 rounded-full">${q.category}</span>
+                            <span class="text-xs font-semibold px-3 py-1 rounded-full border ${diffColor}">${q.difficulty}</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-indigo-300 transition-colors">${q.title}</h3>
+                        <p class="text-slate-400 text-xs line-clamp-2 mb-4 leading-relaxed">${q.desc}</p>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between text-xs text-slate-400 mb-4 pt-4 border-t border-slate-800/80">
+                            <span><i class="fa-solid fa-building mr-1"></i> ${q.company}</span>
+                            <span class="${q.solved ? 'text-emerald-400 font-bold' : ''}">${q.solved ? '<i class="fa-solid fa-check mr-1"></i> Solved' : 'Unsolved'}</span>
+                        </div>
+                        <button onclick="openModal(${q.id})" class="w-full bg-slate-900 hover:bg-indigo-600 text-slate-200 hover:text-white font-semibold py-2.5 rounded-xl text-xs transition-all flex items-center justify-center space-x-2 border border-slate-700 hover:border-transparent">
+                            <span>View Solution & Code</span>
+                            <i class="fa-solid fa-code"></i>
+                        </button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function filterQuestions(cat) {
+            currentFilter = cat;
+            document.querySelectorAll('.cat-btn').forEach(btn => {
+                if (btn.innerText.includes(cat) || (cat === 'All' && btn.innerText.includes('All'))) {
+                    btn.className = "cat-btn px-5 py-2.5 rounded-xl text-sm font-semibold bg-indigo-600 text-white shadow-md shadow-indigo-600/30 whitespace-nowrap transition-all";
+                } else {
+                    btn.className = "cat-btn px-5 py-2.5 rounded-xl text-sm font-semibold bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 whitespace-nowrap transition-all";
+                }
+            });
+            renderQuestions();
+        }
+
+        // Search Input Listener
+        document.getElementById('question-search').addEventListener('input', (e) => {
+            searchQuery = e.target.value;
+            renderQuestions();
+        });
+
+        // Modal Functions
+        function openModal(id) {
+            currentModalQuestionId = id;
+            let q = questionsData.find(item => item.id === id);
+            if (!q) return;
+
+            document.getElementById('modal-category').innerText = q.category + ' • ' + q.difficulty;
+            document.getElementById('modal-title').innerText = q.title;
+            document.getElementById('modal-desc').innerText = q.desc;
+            document.getElementById('modal-code').innerText = q.code;
+            document.getElementById('modal-company').innerHTML = `<i class="fa-solid fa-building mr-1"></i> Asked in: ${q.company}`;
+
+            updateModalSolveButtonState(q.solved);
+
+            document.getElementById('solution-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('solution-modal').classList.add('hidden');
+            currentModalQuestionId = null;
+        }
+
+        function updateModalSolveButtonState(solved) {
+            let btn = document.getElementById('modal-solve-btn');
+            let txt = document.getElementById('modal-solve-text');
+            if (solved) {
+                btn.className = "bg-slate-800 hover:bg-slate-700 text-emerald-400 font-bold px-5 py-2.5 rounded-xl text-sm transition-all flex items-center space-x-2 border border-emerald-500/30";
+                txt.innerText = "Solved (Click to Unmark)";
+            } else {
+                btn.className = "bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-5 py-2.5 rounded-xl text-sm transition-all flex items-center space-x-2";
+                txt.innerText = "Mark as Solved";
+            }
+        }
+
+        function toggleSolveCurrent() {
+            if (currentModalQuestionId === null) return;
+            let q = questionsData.find(item => item.id === currentModalQuestionId);
+            if (q) {
+                q.solved = !q.solved;
+                saveProgress();
+                updateModalSolveButtonState(q.solved);
+                renderQuestions();
+            }
+        }
+
+        // Quiz Arena Logic
+        function startQuiz(type) {
+            activeQuizType = type;
+            currentQuizIndex = 0;
+            quizScore = 0;
+
+            document.getElementById('quiz-menu').classList.add('hidden');
+            document.getElementById('quiz-results').classList.add('hidden');
+            document.getElementById('quiz-active').classList.remove('hidden');
+
+            let catNames = { dsa: "DSA & Coding", aptitude: "Quantitative Aptitude", core: "Core CS (OS/DBMS)" };
+            document.getElementById('quiz-category-badge').innerText = catNames[type];
+            document.getElementById('total-q-num').innerText = quizData[type].length;
+
+            loadQuizQuestion();
+        }
+
+        function loadQuizQuestion() {
+            let qList = quizData[activeQuizType];
+            let q = qList[currentQuizIndex];
+
+            document.getElementById('current-q-num').innerText = currentQuizIndex + 1;
+            document.getElementById('quiz-question-text').innerText = q.q;
+
+            let optionsDiv = document.getElementById('quiz-options');
+            optionsDiv.innerHTML = '';
+
+            q.options.forEach((opt, idx) => {
+                let btn = document.createElement('button');
+                btn.className = "w-full text-left p-4 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-200 font-medium transition-all flex items-center justify-between";
+                btn.innerHTML = `<span>${opt}</span><span class="w-6 h-6 rounded-full border border-slate-700 flex items-center justify-center text-xs text-slate-400">${String.fromCharCode(65 + idx)}</span>`;
+                btn.onclick = () => selectQuizAnswer(idx, btn);
+                optionsDiv.appendChild(btn);
+            });
+
+            document.getElementById('next-quiz-btn').classList.add('hidden');
+            startTimer();
+        }
+
+        function startTimer() {
+            clearInterval(quizTimerInterval);
+            timeLeft = 30;
+            document.getElementById('quiz-timer').innerText = timeLeft;
+
+            quizTimerInterval = setInterval(() => {
+                timeLeft--;
+                document.getElementById('quiz-timer').innerText = timeLeft;
+                if (timeLeft <= 0) {
+                    clearInterval(quizTimerInterval);
+                    autoFailQuizQuestion();
+                }
+            }, 1000);
+        }
+
+        function selectQuizAnswer(selectedIndex, btnElement) {
+            clearInterval(quizTimerInterval);
+            let qList = quizData[activeQuizType];
+            let q = qList[currentQuizIndex];
+            let allBtns = document.getElementById('quiz-options').children;
+
+            // Disable all options
+            for (let b of allBtns) {
+                b.disabled = true;
+                b.classList.add('opacity-70');
+            }
+
+            if (selectedIndex === q.ans) {
+                btnElement.className = "w-full text-left p-4 rounded-xl bg-emerald-950/40 border border-emerald-500 text-emerald-300 font-bold transition-all flex items-center justify-between";
+                quizScore++;
+            } else {
+                btnElement.className = "w-full text-left p-4 rounded-xl bg-red-950/40 border border-red-500 text-red-300 font-bold transition-all flex items-center justify-between";
+                allBtns[q.ans].className = "w-full text-left p-4 rounded-xl bg-emerald-950/40 border border-emerald-500 text-emerald-300 font-bold transition-all flex items-center justify-between";
+            }
+
+            document.getElementById('next-quiz-btn').classList.remove('hidden');
+        }
+
+        function autoFailQuizQuestion() {
+            let qList = quizData[activeQuizType];
+            let q = qList[currentQuizIndex];
+            let allBtns = document.getElementById('quiz-options').children;
+            for (let b of allBtns) {
+                b.disabled = true;
+            }
+            allBtns[q.ans].className = "w-full text-left p-4 rounded-xl bg-emerald-950/40 border border-emerald-500 text-emerald-300 font-bold transition-all flex items-center justify-between";
+            document.getElementById('next-quiz-btn').classList.remove('hidden');
+        }
+
+        function nextQuizQuestion() {
+            currentQuizIndex++;
+            let qList = quizData[activeQuizType];
+            if (currentQuizIndex < qList.length) {
+                loadQuizQuestion();
+            } else {
+                finishQuiz();
+            }
+        }
+
+        function finishQuiz() {
+            clearInterval(quizTimerInterval);
+            document.getElementById('quiz-active').classList.add('hidden');
+            document.getElementById('quiz-results').classList.remove('hidden');
+
+            let qList = quizData[activeQuizType];
+            document.getElementById('final-score').innerText = `${quizScore} / ${qList.length}`;
+
+            // Save quiz stats
+            let savedQuizStats = JSON.parse(localStorage.getItem('placement_quiz_stats') || '{"total":0, "correct":0}');
+            savedQuizStats.total += qList.length;
+            savedQuizStats.correct += quizScore;
+            localStorage.setItem('placement_quiz_stats', JSON.stringify(savedQuizStats));
+            updateStatsDisplay();
+        }
+
+        function resetQuiz() {
+            startQuiz(activeQuizType);
+        }
+
+        function backToQuizMenu() {
+            document.getElementById('quiz-results').classList.add('hidden');
+            document.getElementById('quiz-active').classList.add('hidden');
+            document.getElementById('quiz-menu').classList.remove('hidden');
+        }
+
+        function resetProgressData() {
+            if (confirm("Are you sure you want to reset all your progress data?")) {
+                localStorage.clear();
+                location.reload();
+            }
+        }
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Initialize on window load
+        window.onload = function () {
+            loadProgress();
+            renderQuestions();
+        };
+    </script>
+</body>
+
+</html>
